@@ -1,12 +1,8 @@
-function capitalizeName(str) {
-  // Split the string into an array of words
-  let words = str.split(' ');
+document.addEventListener('DOMContentLoaded', () => {
+  const inputField = document.getElementById('fname');
 
-  // Capitalize the first letter of each word and lowercase the rest
-  words = words.map(word => {
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  inputField.addEventListener('blur', () => {
+    // Convert the input field content to uppercase
+    inputField.value = inputField.value.toUpperCase();
   });
-
-  // Join the words back into a single string
-  return words.join(' ');
-}
+});
